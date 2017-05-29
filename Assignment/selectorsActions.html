@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!-- ex02-update_complete.html / be sure jquery.js is available -->
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery Example</title>
+
+
+<!-- add styles -->
+<style>
+body {font-size:2.25em;}
+.countryname {font-weight: bold; color: blue;}
+.countrycapital {font-style: italic; background: red; color: white;}
+.newstyle {background: purple; color: yellow;}
+button {margin: 10px; font-size:0.75em;}
+.head {font-weight:bold; color:purple;}
+#para1, #para2, #para3 {}
+.sformat {padding:5px; width:48%;border:thin solid black;background:bisque;}
+#s1 {float: left;}
+#s2 {float: right;}
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+	<section id="s1" class="sformat">
+		<!-- Empty div to place country name on startup -->
+		<p class="head">Country:</p>
+		<div id="country"></div>
+		<hr>
+		
+		<!-- Empty div to place capital on start-up -->
+		<p class="head">Capital:</p>
+		<div id="capital"></div>
+		
+		<button id="hide">Click me to hide capital name</button>
+		<button id="show">Click me to show capital name</button>
+		<button id="toggle">Click me to toggle between show/hide for capital name</button><br>
+		
+		<button id="showclass">Click me to change class style for country name</button>
+		<button id="removeclass">Click me to remove class style for country name</button>
+		<button id="toggleclass">Click me to toggle class style for country name</button>
+	</section>
+	
+	<section id="s2" class="sformat">
+		<ul>
+			<li id="programming">Programming</li>
+			<li id="database">Database Design</li>
+			<li id="webDevelopment">Web Development</li>
+			<li id="systems">Systems based Architecture</li>
+			<li id="logicalThinking">Logical Thinking</li>
+		</ul>
+		<p>Paragraph with an anchor tag <a href="#">SITE</a></p>
+		<p title="titlePara">Paragraph with a title</a></p>
+		
+		<button id="pick1">Click to highlight bullet list lines with 'web' start in id attribute</button>
+		<button id="pick2">Click to highlight bullet list lines with 'ing' end in id attribute</button>
+		<button id="pick3">Click to highlight bullet list lines with 'base' included anywhere in the text</button>
+		<button id="pick4">Click to highlight paragraph (p) tags that contain an anchor (a) tag</button>
+		<button id="pick5">Click to hightlight paragraph (p) tags with a title attribute</button>
+	</section>
+	<br style="clear:both;">
+	<hr>
+	<section id="para1">
+		<strong>Click on this paragraph for an alert message!</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae
+		enim justo. Mauris eget augue id lorem consequat laoreet. Cras ut ante a
+		nunc rutrum iaculis.
+	</section><br>
+	<section id="para2">
+		<strong>Click on this paragraph for slide example.</strong> Donec eu neque nunc. Pellentesque pharetra nibh scelerisque tellus
+		tincidunt in volutpat augue semper. Proin luctus sem ac arcu convallis
+		vel ultrices felis scelerisque. Duis vitae sem eros.
+	</section><br>
+	<section id="para3">
+		<strong>Click on this paragraph for fade example.</strong> Pellentesque pharetra nibh scelerisque tellus tincidunt in volutpat
+		augue semper. Proin luctus sem ac arcu convallis vel ultrices felis
+		scelerisque. Duis vitae sem eros.
+	</section><br>
+	<!-- used to hold go back image -->
+	<section id="para4"></section>
+</body>
+</html>

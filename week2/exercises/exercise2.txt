@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Exercise 1</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+		$("#ebutton").click(function(){
+			$("p:contains('Express')").css("background-color", "3px solid red");
+        });
+		
+		$("#sbutton").click(function(){
+			$("p:contains('stops')").css("background-color", "3px solid yellow");
+        });
+});
+
+    </script>
+	
+	<style>
+	.sections {
+		color: blue;
+		font-style:italic;
+		
+	}</style> 
+	
+	
+</head>
+
+<body>
+    <section id="content"><h3>Brampton Züm Bus Rapid Transit - Morning Rush Hour Departures to York U</h3>
+		<ul>
+		<li>06 26 </li>
+		<li>06 55 (Express) </li>
+		<li>07 05 / (4 stops)</li>
+		<li>07 05 (Express)</li>
+		<li>07 25 (2 STOPS)</li>
+		<li>07 35 (Express)</li>
+		<li> 07 45 / (3 Stops) </li>
+		<li>07 58 (Express)</li>
+		<li>08 20 (Express)</li>
+		</ul>
+
+		<button id="ebutton">Highlight EXPRESS</button>
+		<button id="sbutton">Highlight STOPS</button>
+</section>
+	<section id="content1">Student no:991420517 </section>
+</body>
+
+</html>

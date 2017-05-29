@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<!-- DOM_climb.html
+	.remove and .detach
+	.remove - is removed from DOM permanently
+	.detach - is removed but held so can be reattached
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>DOM Climb</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<style>
+	.pieApple { 
+		color: red; 
+		font-size: 24pt;}
+	.pieStrawberry { 
+		color: pink;
+		font-size: 36pt;}
+	#aniSpc {
+		font-size: 24pt;
+		width: 600px;
+		border: thin solid black;
+		padding: 10px;
+	}
+	.output {font-size: 2em;}
+</style>
+
+<script>
+
+
+</script>
+
+</head>
+<body>
+	<img id="pear" src="images/pear.png"/>
+	<img id="strawberry" src="images/strawberry.png"/>
+	<img id="apple" src="images/red-apple.jpg" />
+	
+	<p id="firstImg" class="output">First image src using <em>:nth()</em>:  </p>
+	<p id="lastImg" class="output">Last image src using <em>:last</em>:  </p>
+	<hr>
+	
+	<button id="rbutton">Click to remove PEAR</button>
+	<button id="dbutton">Click to detach STRAWBERRY</button>
+	<button id="d2button">Click to restore Strawberry after Apple</button>
+	<hr>
+	
+	<p class="pieApple"><img src="images/red-apple.jpg" /></p>
+	<button id="abutton">Click to replace apple with strawberry</button>
+	<hr>
+	
+	<p><section id="aniSpc">Animate can be used to do lots of stuff</section></p>
+	<hr>
+	<p><section id="chain"><img src="images/red-apple.jpg" /></section></p>
+
+	
+</body>
+</html>
+

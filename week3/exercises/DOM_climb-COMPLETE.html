@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!-- DOM_climb.html
+	.remove and .detach
+	.remove - is removed from DOM permanently
+	.detach - is removed but held so can be reattached
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>DOM Climb</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<style>
+	.pieApple { 
+		color: green; 
+		font-size: 24pt;}
+	.pieStrawberry { 
+		color: green;
+		font-size: 36pt;}
+	#aniSpc {
+		font-size: 24pt;
+		width: 600px;
+		border: thin solid black;
+		padding: 10px; }
+	.output {font-size: 2em;}
+</style>
+<script>
+	$(document).ready(function() {	
+		//Done when document loads
+		
+		//Pulls attribute value from an HTML tag
+		$("#firstImg").append(($("img:nth(0)").attr("src")));
+		$("#lastImg").append(($("img:last").attr("src")));
+		
+		$("#d2button").hide();
+		$("#abutton").hide();
+		// end of document load
+		
+		$("#rbutton").click(function()
+			{ $("img#pear").remove(); 
+				$("#rbutton").hide();});
+
+		$("#dbutton").click(function()
+			{ $a = $("img#strawberry").detach();
+				$("#dbutton").hide();
+				$("#d2button").show();
+				$("#abutton").show();});
+			
+		$("#d2button").click(function()
+			{ $("img#apple").last().after($a); 
+				$("#d2button").hide();});
+			
+		$("#abutton").click(function()
+			{	$(".pieApple").replaceWith($a); 
+				$("#abutton").hide();});
+
+			
+		chainit();
+		animateSpace();
+	});
+	
+	function chainit() {
+		$("#chain").fadeIn(3000).fadeOut(3000);
+		setTimeout("chainit()", 4000); // if this function in doc ready, remove " around chainit
+	}
+	
+	function animateSpace() {
+		$("#aniSpc").animate({letterSpacing: "15px"}).delay(2000);
+		$("#aniSpc").animate({letterSpacing: "0px"});		
+		setTimeout("animateSpace()", 4000);
+	}
+
+</script>
+
+</head>
+<body>
+	<img id="pear" src="images/pear.png"/>
+	<img id="strawberry" src="images/strawberry.png"/>
+	<img id="apple" src="images/red-apple.jpg" />
+	<hr>
+	
+	<p id="firstImg" class="output">First image src using <em>:nth()</em>:  </p>
+	<p id="lastImg" class="output">Last image src using <em>:last</em>:  </p>
+	<hr>
+	
+	<button id="rbutton" style="background:green;">Click to remove PEAR</button>
+	<button id="dbutton" style="background:green;">Click to detach STRAWBERRY / 2 buttons will show after click</button>
+	<button id="d2button" style="background: green;">Click to restore Strawberry after Apple</button>
+	<hr>
+	
+	<p class="pieApple"><img src="images/red-apple.jpg" /></p>
+	<button id="abutton" style="background: green;">Click to replace apple with strawberry</button>
+	<hr>
+	
+	<p><section id="aniSpc">Animate can be used to do lots of stuff</section></p>
+	<hr>
+	<p><section id="chain"><img src="images/red-apple.jpg" /></section></p>
+
+	
+</body>
+</html>
+<!--reference professor ahmed -->

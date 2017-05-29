@@ -1,0 +1,9 @@
+AuthUserFile /home/sidhu267/public_html/Assignments/.htpasswd
+
+AuthType Basic
+
+AuthName "prof Assignments"
+
+AuthName "sidhu267 Assignments"
+
+Require valid-user

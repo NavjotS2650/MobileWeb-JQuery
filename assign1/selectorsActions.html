@@ -1,0 +1,91 @@
+
+<!DOCTYPE HTML>
+<!-- ex02-update_complete.html / be sure jquery.js is available -->
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery Example</title>
+<script src="_js/jquery.js"></script>
+<script src="_js/myscript.js"></script>
+
+<!-- add styles -->
+<style>
+body {font-size:2em;}
+.countryname {font-weight: bold; color: red;}
+.countrycapital {font-style: italic; background: white; color: red;}
+.newstyle {
+	margin: 5px; 
+	padding: 10px; 
+	border: double thick black;
+	border-radius: 20px; }
+button {margin: 10px; font-size:0.75em;}
+.head {font-weight:bold; color:purple;}
+#para1, #para2, #para3 {}
+.sformat {padding:5px; width:48%;border:thin solid black;background:bisque;}
+#s1 {float: left;}
+#s2 {float: right;}
+.fleft {float: left; width: 50%;}						
+.smallimg{width: 25px;}
+
+</style>
+
+</head>
+<body>
+	<div id="s1" class="sformat">
+	<!-- Empty div to place country name on startup -->
+		<div class="fleft" id="country"></div>
+		<div class="fleft" id="capital"></div>
+		<hr style="clear:both;">
+		<button id="hide">Hide capital name</button>
+		<button id="show">Show capital name</button>
+		<button id="toggle">Toggle capital name</button><br>
+		<hr>
+		<div style="text-align:center;">
+			<img src="_images/Canada_flag.jpg" style="width:200px;float:left;">
+			<img src="_images/ontario.png" style="width:200px;float:right;">
+		</div>
+		<br style="clear:both;">
+		<hr>
+		<button id="showclass">Change style for image</button>
+		<button id="removeclass">Remove style for image</button>
+		<button id="toggleclass">Toggle style for image</button>
+	</div>
+	
+	<div id="s2" class="sformat">
+		<ul>
+			<li id="programming">Programming <img src="_images/prog.gif" class="smallimg"></li>
+			<li id="database">Database Design <img src="_images/db.gif" class="smallimg"></li>
+			<li id="webDevelopment">Web Development <img src="_images/web.png" class="smallimg"></li>
+			<li id="systems">Systems based Architecture <img src="_images/systems.png" class="smallimg"></li>
+			<li id="logicalThinking">Logical Thinking <img src="_images/logical.gif" class="smallimg"></li>
+		</ul>
+		
+		<button id="pick1">Highlight bullet list lines with 'web' start in id attribute</button>
+		<button id="pick2">Highlight bullet list lines with 'base' included anywhere in the text</button>
+		<button id="pick3">Highlight any image with .gif extension</button>
+		<button id="pick4">Change to italic any section below that has an image</button>
+		<button id="pick5">Underline any section below that includes a paragraph with the text 'para1' included</button>
+
+	</div>
+	<br style="clear:both;">
+	<hr>
+	<section id="para1">
+		<strong>Hover on this paragraph for color change and click for a message!</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae
+		enim justo. Mauris eget augue id lorem consequat laoreet. Cras ut ante a
+		nunc rutrum iaculis. <img src='_images/Canada_flag.jpg' class='smallimg'><p>text para1</p>
+	</section><br>
+	<section id="para2">
+		<strong>Click on this paragraph for slide example.</strong> Donec eu neque nunc. Pellentesque pharetra nibh scelerisque tellus
+		tincidunt in volutpat augue semper. Proin luctus sem ac arcu convallis
+		vel ultrices felis scelerisque. Duis vitae sem eros.
+	</section><br>
+	<section id="para3">
+		<strong>Click on this paragraph for fade example.</strong> Pellentesque pharetra nibh scelerisque tellus tincidunt in volutpat
+		augue semper. Proin luctus sem ac arcu convallis vel ultrices felis
+		scelerisque. Duis vitae sem eros.
+	</section><br>
+	<!-- used to hold go back image -->
+	<section id="para4"></section>
+</body>
+</html>
